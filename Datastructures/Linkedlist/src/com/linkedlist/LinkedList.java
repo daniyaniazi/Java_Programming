@@ -101,6 +101,20 @@ public class LinkedList {
         }
         return array;
     }
+    public void  reverse(){
+        if (isEmpty()) return;
+        Node previous = first;
+        Node current = first.next;
+        while (current!=null){
+            Node next=current.next;
+            current.next=previous;
+            previous =current;
+            current=next;
+        }
+        last=first;
+        last.next=null;
+        first=previous;
+    }
 public int size(){
         return  size;
 

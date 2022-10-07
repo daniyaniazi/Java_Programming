@@ -21,5 +21,10 @@ public class Main {
         System.out.println(list.size());
         int[] array = list.toArray();
         System.out.println(Arrays.toString(array));
+        list.reverse();
+        array =list.toArray();
+        System.out.println(Arrays.toString(array));
+
+
     }
 }
