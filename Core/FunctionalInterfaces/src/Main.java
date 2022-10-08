@@ -35,5 +35,15 @@ public class Main {
         // Function Interface
         Function<String,Integer> map = str-> str.length();
         Integer length =map.apply("sky");
+
+        // Compose functions
+        Function<String,String> replaceColon= str -> str.replace("=",":");
+        Function<String,String> addBraces= str-> "{"+str+"}";
+
+        String result =replaceColon.andThen(addBraces ).apply("key:value");
+        System.out.println(result);
+
+        // 2nd way
+        addBraces.compose(replaceColon).apply("key:value");
     }
 }
