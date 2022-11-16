@@ -2,7 +2,7 @@ class Solution {
 
 
     /// @title Reverse A Number
-    /// @author Daniyan
+    /// @author Daniya
     /// @dev Leetcode Link -> https://leetcode.com/problems/reverse-integer/
     public int reverse(int x) {
         int remainingNumber ;
