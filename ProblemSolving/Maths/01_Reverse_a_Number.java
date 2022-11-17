@@ -21,7 +21,7 @@ class Solution {
             remainingNumber = remainingNumber / 10;
         }
         System.out.println(reverseStr);
-        if(Long.parseLong(reverseStr) > Integer.MAX_VALUE || Long.parseLong(reverseStr)             < Integer.MIN_VALUE){
+        if(Long.parseLong(reverseStr) > Integer.MAX_VALUE || Long.parseLong(reverseStr)  < Integer.MIN_VALUE){
             return 0;
         }
         if(x<0){
