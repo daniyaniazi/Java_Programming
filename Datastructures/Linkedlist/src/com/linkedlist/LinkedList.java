@@ -124,4 +124,23 @@ public int size(){
 
     }
 
+
+    public int getKthElementFromLast(int k){
+        if (isEmpty()){
+            throw new IllegalStateException();
+        }
+        Node a = first;
+        Node b = first;
+        for (int  i=0 ; i<k-1;i++){
+            b =  b.next;
+            if (b==null){
+                throw new IllegalArgumentException();
+            }
+        }
+        while (b!=last){
+            a=a.next;
+            b=b.next;
+        }
+        return a.value;
+    }
 }
