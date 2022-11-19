@@ -15,5 +15,18 @@ public class Main {
         stack.push(top);
         System.out.println(top);
         System.out.println(stack);
+
+        StackByArray arrayStack = new StackByArray();
+        arrayStack.push(8);
+        arrayStack.push(10);
+        arrayStack.push(18);
+        arrayStack.push(3);
+        arrayStack.push(4);
+        System.out.println(arrayStack.isFull());
+        System.out.println(arrayStack);
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack);
+        System.out.println(arrayStack.pop());
+        System.out.println(arrayStack);
     }
 }
