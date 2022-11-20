@@ -7,6 +7,7 @@ public class Main {
 
     {
         Queue<Integer> queue = new ArrayDeque<>();
+
         queue.add(10);
         queue.add(30);queue.add(50);
         queue.add(60);
@@ -17,13 +18,17 @@ public class Main {
         System.out.println(reverse(queue));
 
 //        ArrayQueue
-        ArrayQueue arrayQueue = new ArrayQueue(10);
+        ArrayQueue arrayQueue = new ArrayQueue(5);
+        //  arrayQueue.dequeue();
         arrayQueue.enqueue(10);
         arrayQueue.enqueue(30);
         arrayQueue.enqueue(50);
         arrayQueue.enqueue(60);
         System.out.println(arrayQueue);
         arrayQueue.dequeue();
+        System.out.println(arrayQueue);
+        arrayQueue.enqueue(70);
+        arrayQueue.enqueue(80);
         System.out.println(arrayQueue);
         arrayQueue.dequeue();
         System.out.println(arrayQueue);

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class ArrayQueue {
     private int[] items;
@@ -13,13 +14,18 @@ public class ArrayQueue {
         if(count==items.length){
             throw new IllegalArgumentException();
         }
-        items[rear++]=item;
+        items[rear]=item;
+        rear = (rear+1)%items.length;
         count++;
     }
     //dequeue
     public int dequeue(){
+        if(count ==0){
+            throw new NoSuchElementException();
+        }
         int item = items[front];
-        items[front++] = 0;
+        items[front] = 0;
+        front = (front+1)%items.length;
         count--;
         return item;
     }
