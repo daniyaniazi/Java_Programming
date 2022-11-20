@@ -16,7 +16,7 @@ public class Main {
         System.out.println(front);
         System.out.println(queue);
         System.out.println(reverse(queue));
-
+        System.out.println("----------------------------");
 //        ArrayQueue
         ArrayQueue arrayQueue = new ArrayQueue(5);
         //  arrayQueue.dequeue();
@@ -32,9 +32,22 @@ public class Main {
         System.out.println(arrayQueue);
         arrayQueue.dequeue();
         System.out.println(arrayQueue);
+
+        System.out.println("----------------------------");
+        //TwoStackQueue
+        TwoStackQueue twoStackQueue = new TwoStackQueue();
+        twoStackQueue.enqueue(30);
+        twoStackQueue.enqueue(40);
+        twoStackQueue.enqueue(60);
+        twoStackQueue.enqueue(50);
+        twoStackQueue.enqueue(80);
+        System.out.println( twoStackQueue.dequeue());
+        System.out.println(  twoStackQueue.dequeue());
+
     }
     public  static  Queue  reverse (Queue<Integer> queue){
         Stack<Integer> stack = new Stack<>();
+
         while (!queue.isEmpty()){
             stack.push(queue.remove());
         }
