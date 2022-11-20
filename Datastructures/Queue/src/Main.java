@@ -15,6 +15,18 @@ public class Main {
         System.out.println(front);
         System.out.println(queue);
         System.out.println(reverse(queue));
+
+//        ArrayQueue
+        ArrayQueue arrayQueue = new ArrayQueue(10);
+        arrayQueue.enqueue(10);
+        arrayQueue.enqueue(30);
+        arrayQueue.enqueue(50);
+        arrayQueue.enqueue(60);
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
+        arrayQueue.dequeue();
+        System.out.println(arrayQueue);
     }
     public  static  Queue  reverse (Queue<Integer> queue){
         Stack<Integer> stack = new Stack<>();
