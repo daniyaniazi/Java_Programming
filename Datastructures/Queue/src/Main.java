@@ -3,13 +3,12 @@ import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
-    public static void main(String[] args)
-
-    {
+    public static void main(String[] args) {
         Queue<Integer> queue = new ArrayDeque<>();
 
         queue.add(10);
-        queue.add(30);queue.add(50);
+        queue.add(30);
+        queue.add(50);
         queue.add(60);
         System.out.println(queue);
         Integer front = queue.remove();
@@ -41,17 +40,32 @@ public class Main {
         twoStackQueue.enqueue(60);
         twoStackQueue.enqueue(50);
         twoStackQueue.enqueue(80);
-        System.out.println( twoStackQueue.dequeue());
-        System.out.println(  twoStackQueue.dequeue());
+        System.out.println(twoStackQueue.dequeue());
+        System.out.println(twoStackQueue.dequeue());
+
+        System.out.println("----------------------------");
+        //TwoStackQueue
+        ArrayPriorityQueue priorityQueue = new ArrayPriorityQueue(4);
+        priorityQueue.enqueue(1);
+        priorityQueue.enqueue(4);
+        priorityQueue.enqueue(2);
+//        priorityQueue.enqueue(5);
+//        priorityQueue.enqueue(0);
+        System.out.println(priorityQueue);
+        //   System.out.println(  twoStackQueue.dequeue());
+        while (!priorityQueue.isEmpty()) {
+            System.out.println(priorityQueue.dequeue());
+        }
 
     }
-    public  static  Queue  reverse (Queue<Integer> queue){
+
+    public static Queue reverse(Queue<Integer> queue) {
         Stack<Integer> stack = new Stack<>();
 
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             stack.push(queue.remove());
         }
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             queue.add(stack.pop());
         }
         return queue;
