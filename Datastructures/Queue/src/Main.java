@@ -52,7 +52,7 @@ public class Main {
 //        priorityQueue.enqueue(5);
 //        priorityQueue.enqueue(0);
         System.out.println(priorityQueue);
-        //   System.out.println(  twoStackQueue.dequeue());
+        //   System. out.println(  twoStackQueue.dequeue());
         while (!priorityQueue.isEmpty()) {
             System.out.println(priorityQueue.dequeue());
         }
