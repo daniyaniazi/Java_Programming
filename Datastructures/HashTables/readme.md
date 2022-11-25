@@ -19,3 +19,8 @@ Uses Hash function which is Detereministics
 * Insert O(1)
 * Lookup O(1)
 * Delete O(1)
+
+**Java Implementations**
+* HashMap
+* Hashtable - Depreciated !!
+* CocurrentHashMap - used in multi threaded app using hash maps
