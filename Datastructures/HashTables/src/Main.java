@@ -30,15 +30,15 @@ public class Main {
             set.add(num);
         }
         System.out.println(set);
-
+//      HashTableLL
         HashTableLL tableLL = new HashTableLL();
         tableLL.put(6, "A"); //1
         tableLL.put(8, "b");
         tableLL.put(11, "C");
         tableLL.put(6, "A++"); //1
-        tableLL.remove(6);
+        //  tableLL.remove(6);
         System.out.println(tableLL.get(6));
-        System.out.println(tableLL.get(10));
+        //   System.out.println(tableLL.get(10));
 
     }
 
