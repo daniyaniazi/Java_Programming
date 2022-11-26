@@ -40,6 +40,23 @@ public class HashTableLL {
         return null;
     }
 
+    public void remove(int key) {
+        int index = hash(key);
+        LinkedList<Entry> bucket = entries[index];
+        if (bucket == null)
+            throw new IllegalStateException();
+        for (Entry entry : bucket) {
+            if (entry.key == key) {
+                //REMOVE
+                bucket.remove(entry);
+                return;
+            }
+        }
+        throw new IllegalStateException();
+
+
+    }
+
     private class Entry {
         private int key;
         private String value;
