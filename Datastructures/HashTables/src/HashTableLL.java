@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class HashTable {
+public class HashTableLL {
 
     private LinkedList<Entry>[] entries = new LinkedList[5];
 
@@ -27,6 +27,17 @@ public class HashTable {
 
     private int hash(int key) {
         return key % entries.length;
+    }
+
+    public String get(int key) {
+        int index = hash(key);
+        LinkedList<Entry> bucket = entries[index];
+        if (bucket != null)
+            for (Entry entry : bucket)
+                if (entry.key == key)
+                    return entry.value;
+
+        return null;
     }
 
     private class Entry {
