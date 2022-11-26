@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,9 +26,20 @@ public class Main {
         Set<Integer> set = new HashSet<>();
         int[] numbers = {1, 4, 5, 5, 3, 24, 3, 4, 3, 6};
 
-        for (int num:numbers) {
-        set.add(num);
+        for (int num : numbers) {
+            set.add(num);
         }
         System.out.println(set);
+
+        HashTableLL tableLL = new HashTableLL();
+        tableLL.put(6, "A"); //1
+        tableLL.put(8, "b");
+        tableLL.put(11, "C");
+        tableLL.put(6, "A++"); //1
+        System.out.println(tableLL.get(6));
+        System.out.println(tableLL.get(10));
+
     }
+
+
 }
