@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/*
+@notice Problem Link -> https://leetcode.com/problems/valid-anagram/submissions/
+*/
 public class Main {
     public static void main(String[] args) {
 
@@ -10,7 +13,7 @@ public class Main {
         if(str1==null || str2==null || str2.length() != str1.length())  return  false;
         // O(n)
         char[] array1 = str1.toLowerCase().toCharArray();
-        char[] array2 = str1.toLowerCase().toCharArray();
+        char[] array2 = str2.toLowerCase().toCharArray();
         // O(n log n)
         Arrays.sort(array1);
         Arrays.sort(array2);
