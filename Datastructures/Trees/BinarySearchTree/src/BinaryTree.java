@@ -91,7 +91,32 @@ public class BinaryTree {
     }
     private  int height(Node root){
         if (root==null) return -1;
-        if(root.left == null && root.right == null) return 0;
+        if(isLeaf(root)) return 0;
         return 1+ Math.max(height(root.left),height(root.right));
     }
+
+    private static boolean isLeaf(Node root) {
+        return root.left == null && root.right == null;
+    }
+
+    // Binary Tree - O(n)
+    public  int min(){
+        return  min(root);
+    }
+    private int min(Node root){
+        if(root.left == null || root.right == null) return root.value;
+        int left = min(root.left);
+        int right = min(root.right);
+
+        return Math.min( Math.min(left,right),root.value);
+    }
+    // O(log n)
+    public  int BinaryMin(){
+       Node current = root;
+       while (current.left!=null){
+           current = current.left;
+       }
+       return current.value;
+    }
+
 }
