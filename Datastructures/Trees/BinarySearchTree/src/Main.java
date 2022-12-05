@@ -10,6 +10,7 @@ public class Main {
         tree.preOrder();
         tree.inOrder();
         tree.postOrder();
+        System.out.println( tree.height());
 
     }
 }
