@@ -1,5 +1,4 @@
-public class OnSpaceSolution {
-}
+
 class Solution {
     public int missingNumber(int[] nums) {
         int[] freq =  new int[nums.length+1];
