@@ -1,3 +1,5 @@
+// KADANE'S ALGORITHM
+
 class Solution {
     public int maxSubArray(int[] nums) {
         int maxSum = Integer.MIN_VALUE;
