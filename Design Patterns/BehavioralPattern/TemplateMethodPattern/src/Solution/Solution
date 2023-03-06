@@ -1,0 +1,8 @@
+1. Can use Polymorphism - Strategy Pattern
+TaskExecutor <- Task
+method -> Common audit behavior
+Task <- TransferMoney
+Task <- GenerateReport
+
+2. Inheritance
+Common base abstract  class Task which contain common behavior
