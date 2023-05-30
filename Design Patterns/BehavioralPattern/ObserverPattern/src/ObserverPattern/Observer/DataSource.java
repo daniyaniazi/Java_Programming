@@ -9,6 +9,6 @@ public class DataSource extends ObservableSubject {
 
     public void setValue(int value) {
         this.value = value;
-        notifyObserver(value);
+        notifyObserver();
     }
 }

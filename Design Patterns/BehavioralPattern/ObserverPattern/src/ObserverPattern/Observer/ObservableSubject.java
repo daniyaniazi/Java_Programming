@@ -13,10 +13,10 @@ public class ObservableSubject {
     public  void removeObserver(IObeserver observer){
         observers.remove(observer);
     }
-    public  void notifyObserver(int value){
+    public  void notifyObserver(){
         for (IObeserver observer: observers
              ) {
-            observer.update(value);
+            observer.update();
         }
     }
 }
