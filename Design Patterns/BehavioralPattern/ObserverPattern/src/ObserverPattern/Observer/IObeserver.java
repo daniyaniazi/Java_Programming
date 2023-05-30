@@ -1,5 +1,5 @@
 package ObserverPattern.Observer;
 
 public interface IObeserver {
-    void update();
+    void update(int value);
 }
