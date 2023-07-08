@@ -11,3 +11,23 @@ class Solution {
         return;
     }
 }
+class OptimizedSolution
+{
+    void reverseArray(long arr[], int start, int end) {
+        while (start < end) {
+            long temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    
+    void leftRotate(long arr[], int k, int n) {
+        reverseArray(arr, 0, k - 1);
+        reverseArray(arr, k, n - 1);
+        reverseArray(arr, 0, n - 1);
+    }
+    
+    
+}
