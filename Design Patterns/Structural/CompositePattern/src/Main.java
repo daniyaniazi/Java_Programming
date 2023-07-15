@@ -1,5 +1,8 @@
-import Problem.Group;
-import Problem.Shape;
+// import Problem.Group;
+// import Problem.Shape;
+
+import Solution.Group;
+import Solution.Shape;
 
 public class Main {
     public static void main(String[] args) {
